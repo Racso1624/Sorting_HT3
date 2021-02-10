@@ -1,20 +1,21 @@
 import java.util.ArrayList;
 
-public class Gnome<E> implements Comparable{
-    
-    private ArrayList<E> datos;
-    
-    public Gnome(){}
+public class Gnome{
 
-    public E[] sort(E data[], int n){
+    private Comparable[] almacen;
+
+    
+    public Gnome(){almacen = new Comparable[3000];}
+
+    public Comparable[] gnomesort(Comparable[] data){
         int index = 0; 
-        while (index < n) { 
+        while (index < data.length) {
             if (index == 0) 
                 index++; 
-            if (data[index] >= data[index - 1]) 
+            if ((data[index].compareTo(data[index - 1]))>0)
                 index++; 
             else { 
-                int temp = 0; 
+                Comparable temp = 0;
                 temp = data[index]; 
                 data[index] = data[index - 1]; 
                 data[index - 1] = temp; 
@@ -24,5 +25,4 @@ public class Gnome<E> implements Comparable{
         return data;
 
     }
-
 }

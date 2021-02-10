@@ -10,7 +10,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<Integer> listadatos = new ArrayList<Integer>();
+        Burbuja bur = new Burbuja();
+        Gnome gnome = new Gnome();
+        Merge me = new Merge();
+        Quick qu=new Quick();
+        Radix rad=new Radix();
+
+        Comparable[] listadatos = new Comparable[3000];
         
         try {
             File file = new File("Datos.txt");
@@ -35,22 +41,31 @@ public class Main {
         try {
             File obj = new File("Datos.txt");
             Scanner myReader = new Scanner(obj);
+            int contador =0;
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
                 int numero = Integer.parseInt(data);
-                listadatos.add(numero);
-                
+                listadatos[contador]=numero;
+                contador++;
             }
-
-            Integer[] datos = listadatos.toArray(new Integer[0]);
 
             myReader.close();
         } catch (FileNotFoundException e) {
             System.out.println("Archivo no encontrado.");
             e.printStackTrace();
         }
+        /*
+        Comparable[] izq = new Comparable[listadatos.length/2];
+        Comparable[] der= new Comparable[listadatos.length - izq.length];
+        System.arraycopy(listadatos,0,izq,0,izq.length);
+        System.arraycopy(listadatos,izq.length,der,0,der.length);
+         */
 
-        
+        System.out.println(bur.bubbleSort(listadatos)[listadatos.length-1]);
+        System.out.println(gnome.gnomesort(listadatos));
+        me.Mergesort(listadatos,0, listadatos.length-1);
+        qu.quicksort(listadatos,0, listadatos.length-1);
+        rad.radixsort(listadatos,listadatos.length);
     }
     
 }

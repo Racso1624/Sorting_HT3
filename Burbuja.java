@@ -1,12 +1,10 @@
 import java.lang.reflect.Array;
 
-public class Burbuja<E> implements Comparable<E> {
-    
-    private Array<E> datos;
-    
+public class Burbuja{
+
     public Burbuja(){}
 
-    public void bubbleSort(E[] array){
+    public Comparable[] bubbleSort(Comparable[] array){
         int n = array.length;
         while (n > 0)
         {
@@ -15,7 +13,7 @@ public class Burbuja<E> implements Comparable<E> {
             { 
                 if (array[currentIndex - 1].compareTo(array[currentIndex]) > 0)
                 {
-                    E temp = array[currentIndex - 1];
+                    Comparable temp = array[currentIndex - 1];
                     array[currentIndex - 1] = array[currentIndex];
                     array[currentIndex] = temp;
                     lastModifiedIndex = currentIndex;
@@ -23,4 +21,7 @@ public class Burbuja<E> implements Comparable<E> {
             }
             n = lastModifiedIndex;
         }
+
+        return array;
     }
+}

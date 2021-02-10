@@ -1,17 +1,17 @@
 import java.util.*; 
   
-public class Radix { 
+public class Radix {
   
-    public static int getMax(int arr[], int n) 
+    public static int getMax(Comparable[] arr, int n)
     { 
-        int mx = arr[0]; 
+        int mx = (int) arr[0];
         for (int i = 1; i < n; i++) 
-            if (arr[i] > mx) 
-                mx = arr[i]; 
+            if ((int)arr[i] > mx)
+                mx = (int) arr[i];
         return mx; 
     } 
   
-    public static void countSort(int arr[], int n, int exp) 
+    public static void countSort(Comparable[] arr, int n, int exp)
     { 
         int output[] = new int[n]; // output array 
         int i; 
@@ -19,15 +19,15 @@ public class Radix {
         Arrays.fill(count, 0); 
   
         for (i = 0; i < n; i++) 
-            count[(arr[i] / exp) % 10]++; 
+            count[((int)arr[i] / exp) % 10]++;
   
 
         for (i = 1; i < 10; i++) 
             count[i] += count[i - 1]; 
 
         for (i = n - 1; i >= 0; i--) { 
-            output[count[(arr[i] / exp) % 10] - 1] = arr[i]; 
-            count[(arr[i] / exp) % 10]--; 
+            output[count[((int)arr[i] / exp) % 10] - 1] = (int)arr[i];
+            count[((int)arr[i] / exp) % 10]--;
         } 
   
 
@@ -35,12 +35,14 @@ public class Radix {
             arr[i] = output[i]; 
     } 
   
-    public static void radixsort(int arr[], int n) 
+    public static Comparable[] radixsort(Comparable[] arr, int n)
     { 
-        int m = getMax(arr, n);  
+        int m = getMax(arr, n);
 
         for (int exp = 1; m / exp > 0; exp *= 10) 
-            countSort(arr, n, exp); 
+            countSort(arr, n, exp);
+
+        return arr;
     } 
   
 
