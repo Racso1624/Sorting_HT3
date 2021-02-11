@@ -22,7 +22,7 @@ public class Merge {
  
         int k = l;
         while (i < n1 && j < n2) {
-            if (L[i].compareTo(R[j])>0) {
+            if (L[i].compareTo(R[j])<0) {
                 arr[k] = L[i];
                 i++;
             }

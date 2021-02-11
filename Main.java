@@ -54,18 +54,33 @@ public class Main {
             System.out.println("Archivo no encontrado.");
             e.printStackTrace();
         }
+
         /*
-        Comparable[] izq = new Comparable[listadatos.length/2];
-        Comparable[] der= new Comparable[listadatos.length - izq.length];
-        System.arraycopy(listadatos,0,izq,0,izq.length);
-        System.arraycopy(listadatos,izq.length,der,0,der.length);
+        System.out.println(bur.bubbleSort(listadatos)[listadatos.length-1]);
+        System.out.println(bur.bubbleSort(listadatos)[0]);
          */
 
-        System.out.println(bur.bubbleSort(listadatos)[listadatos.length-1]);
-        System.out.println(gnome.gnomesort(listadatos));
-        me.Mergesort(listadatos,0, listadatos.length-1);
-        qu.quicksort(listadatos,0, listadatos.length-1);
-        rad.radixsort(listadatos,listadatos.length);
+        /*
+        System.out.println(gnome.gnomesort(listadatos)[listadatos.length-1]);
+        System.out.println(gnome.gnomesort(listadatos)[0]);
+         */
+
+
+        /*
+        System.out.println((me.Mergesort(listadatos,0, listadatos.length-1))[listadatos.length-1]);
+        System.out.println((me.Mergesort(listadatos,0, listadatos.length-1))[0]);
+        */
+
+        /*
+        System.out.println(qu.quicksort(listadatos,0, listadatos.length-1)[listadatos.length-1]);
+        System.out.println(qu.quicksort(listadatos,0, listadatos.length-1)[0]);
+        */
+
+        /*
+        System.out.println(rad.radixsort(listadatos,listadatos.length)[listadatos.length-1]);
+        System.out.println(rad.radixsort(listadatos,listadatos.length)[0]);
+         */
+
     }
-    
+
 }

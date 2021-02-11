@@ -2,10 +2,7 @@ import java.util.ArrayList;
 
 public class Gnome{
 
-    private Comparable[] almacen;
-
-    
-    public Gnome(){almacen = new Comparable[3000];}
+    public Gnome(){}
 
     public Comparable[] gnomesort(Comparable[] data){
         int index = 0; 
@@ -19,7 +16,7 @@ public class Gnome{
                 temp = data[index]; 
                 data[index] = data[index - 1]; 
                 data[index - 1] = temp; 
-                index--; 
+                index++;
             } 
         } 
         return data;
