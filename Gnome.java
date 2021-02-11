@@ -4,22 +4,21 @@ public class Gnome{
 
     public Gnome(){}
 
-    public Comparable[] gnomesort(Comparable[] data){
-        int index = 0; 
-        while (index < data.length) {
-            if (index == 0) 
-                index++; 
-            if ((data[index].compareTo(data[index - 1]))>0)
-                index++; 
-            else { 
-                Comparable temp = 0;
-                temp = data[index]; 
-                data[index] = data[index - 1]; 
-                data[index - 1] = temp; 
-                index++;
-            } 
-        } 
-        return data;
+    public Comparable[] gnomesort(Comparable[] list){
+        int i=1;
+        int j=2;
+        Comparable temporal;
 
+        while(i<list.length){
+            if(list[i-1].compareTo(list[i])>0){
+                temporal = list[i-1];
+                list[i-1] =list[i];
+                list[i--] = temporal;
+                i = (i==0) ? j++:i;
+            }else{
+                i = j; j++;
+            }
+        }
+        return list;
     }
 }
