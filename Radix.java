@@ -1,4 +1,10 @@
-import java.util.*; 
+/******************************************************************
+ Radix.java
+ Autor: Diego Franco / Oscar Lopez
+
+ Tipo de ordenamiento por el metodo RADIX.
+ ******************************************************************/
+import java.util.*;
   
 public class Radix {
   
@@ -8,6 +14,7 @@ public class Radix {
      * @param n
      * @return int
      */
+    /** Metodo que indica el valor maximo del listado ingresado.*/
     public static int getMax(Comparable[] arr, int n)
     { 
         int mx = (int) arr[0];
@@ -23,6 +30,7 @@ public class Radix {
      * @param n
      * @param exp
      */
+    /** Metodo que es llamado por el radix para realizar el ordenamiento.*/
     public static void countSort(Comparable[] arr, int n, int exp)
     { 
         int output[] = new int[n]; // output array 
@@ -53,6 +61,8 @@ public class Radix {
      * @param n
      * @return Comparable[]
      */
+    /** Metodo que ordena el listado de valores que se le haya ingresado
+     * de menor a mayor, con el use del compareTo.*/
     public static Comparable[] radixsort(Comparable[] arr, int n)
     { 
         int m = getMax(arr, n);

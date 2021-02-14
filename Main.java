@@ -1,3 +1,11 @@
+/******************************************************************
+ Burbuja.java
+ Autor: Diego Franco / Oscar Lopez
+
+ Clase main que genera un listado de 3000 numeros y los guarda en un
+ txt. luego le pregunta al usuario por que metodo desea ordenarlos
+ enseñandole los resultados.
+ ******************************************************************/
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -12,6 +20,8 @@ public class Main {
     /** 
      * @param args
      */
+    /** Menu que le pregunta al usuario por que metodo desea
+     * realizar el ordenamiento de los valores.*/
     public static void main(String[] args) {
 
         Burbuja burbuja = new Burbuja();

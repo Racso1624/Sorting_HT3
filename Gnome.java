@@ -1,7 +1,13 @@
+/******************************************************************
+ Gnome.java
+ Autor: Diego Franco / Oscar Lopez
+
+ Tipo de ordenamiento por el metodo GNOME.
+ ******************************************************************/
 import java.util.ArrayList;
 
 public class Gnome{
-
+    /** Metodo constructor*/
     public Gnome(){}
 
     
@@ -9,6 +15,8 @@ public class Gnome{
      * @param list
      * @return Comparable[]
      */
+    /** Metodo que ordena el listado de valores que se le haya ingresado
+     * de menor a mayor, con el use del compareTo.*/
     public Comparable[] gnomesort(Comparable[] list){
         int i=1;
         int j=2;

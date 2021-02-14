@@ -1,14 +1,22 @@
+/******************************************************************
+ Burbuja.java
+ Autor: Diego Franco / Oscar Lopez
+
+ Tipo de ordenamiento por el metodo BURBUJA.
+ ******************************************************************/
 import java.lang.reflect.Array;
 
 public class Burbuja{
 
+    /** Metodo constructor*/
     public Burbuja(){}
 
-    
     /** 
      * @param array
      * @return Comparable[]
      */
+    /** Metodo que ordena el listado de valores que se le haya ingresado
+     * de menor a mayor, con el use del compareTo.*/
     public Comparable[] bubbleSort(Comparable[] array){
         int n = array.length;
         while (n > 0)

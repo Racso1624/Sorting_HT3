@@ -1,3 +1,10 @@
+/******************************************************************
+ Pruebas.java
+ Autor: Diego Franco / Oscar Lopez
+
+ Clase de puebasJunit, tiene el fin de analizar el codigo y su
+ correcto funcionamiento.
+ ******************************************************************/
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.Test;

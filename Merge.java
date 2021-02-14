@@ -1,12 +1,18 @@
+/******************************************************************
+ Merge.java
+ Autor: Diego Franco / Oscar Lopez
+
+ Tipo de ordenamiento por el metodo MERGE.
+ ******************************************************************/
 public class Merge {
-    
-    
     /** 
      * @param arr
      * @param l
      * @param m
      * @param r
      */
+    /** Metodo que ordena el listado de valores que se le haya ingresado
+     * de menor a mayor, con el use del compareTo.*/
     public void merge(Comparable[] arr, int l, int m, int r)
     {
 
@@ -62,6 +68,8 @@ public class Merge {
      * @param r
      * @return Comparable[]
      */
+    /** Metodo que llama al merge para poder realizar el ordenamiento
+     * indicandole los parametros correctos.*/
     public Comparable[] Mergesort(Comparable[] arr, int l, int r)
     {
         if (l < r) {

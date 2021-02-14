@@ -1,3 +1,9 @@
+/******************************************************************
+ Quick.java
+ Autor: Diego Franco / Oscar Lopez
+
+ Tipo de ordenamiento por el metodo QUICK.
+ ******************************************************************/
 public class Quick
 {
     
@@ -7,6 +13,8 @@ public class Quick
      * @param high
      * @return int
      */
+    /** Metodo que ordena el listado de valores que se le haya ingresado
+     * de menor a mayor, con el use del compareTo.*/
     int partition(Comparable[] arr, int low, int high)
     {
         Comparable pivot = arr[high];
@@ -40,6 +48,8 @@ public class Quick
      * @param high
      * @return Comparable[]
      */
+    /** Metodo que llama al quick para realizar el ordenamiento
+     * enviandole los parametros necesarios para que lo realice.*/
     public Comparable[] quicksort(Comparable[] arr, int low, int high)
     {
         if (low < high)
