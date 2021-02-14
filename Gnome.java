@@ -4,6 +4,11 @@ public class Gnome{
 
     public Gnome(){}
 
+    
+    /** 
+     * @param list
+     * @return Comparable[]
+     */
     public Comparable[] gnomesort(Comparable[] list){
         int i=1;
         int j=2;

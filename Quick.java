@@ -1,5 +1,12 @@
 public class Quick
 {
+    
+    /** 
+     * @param arr
+     * @param low
+     * @param high
+     * @return int
+     */
     int partition(Comparable[] arr, int low, int high)
     {
         Comparable pivot = arr[high];
@@ -26,6 +33,13 @@ public class Quick
     }
 
 
+    
+    /** 
+     * @param arr
+     * @param low
+     * @param high
+     * @return Comparable[]
+     */
     public Comparable[] quicksort(Comparable[] arr, int low, int high)
     {
         if (low < high)

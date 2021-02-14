@@ -4,6 +4,11 @@ public class Burbuja{
 
     public Burbuja(){}
 
+    
+    /** 
+     * @param array
+     * @return Comparable[]
+     */
     public Comparable[] bubbleSort(Comparable[] array){
         int n = array.length;
         while (n > 0)

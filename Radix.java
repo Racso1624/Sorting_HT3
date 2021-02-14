@@ -2,6 +2,12 @@ import java.util.*;
   
 public class Radix {
   
+    
+    /** 
+     * @param arr
+     * @param n
+     * @return int
+     */
     public static int getMax(Comparable[] arr, int n)
     { 
         int mx = (int) arr[0];
@@ -11,6 +17,12 @@ public class Radix {
         return mx; 
     } 
   
+    
+    /** 
+     * @param arr
+     * @param n
+     * @param exp
+     */
     public static void countSort(Comparable[] arr, int n, int exp)
     { 
         int output[] = new int[n]; // output array 
@@ -35,6 +47,12 @@ public class Radix {
             arr[i] = output[i]; 
     } 
   
+    
+    /** 
+     * @param arr
+     * @param n
+     * @return Comparable[]
+     */
     public static Comparable[] radixsort(Comparable[] arr, int n)
     { 
         int m = getMax(arr, n);

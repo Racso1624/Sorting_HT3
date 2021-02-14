@@ -1,5 +1,12 @@
 public class Merge {
     
+    
+    /** 
+     * @param arr
+     * @param l
+     * @param m
+     * @param r
+     */
     public void merge(Comparable[] arr, int l, int m, int r)
     {
 
@@ -48,6 +55,13 @@ public class Merge {
     }
  
 
+    
+    /** 
+     * @param arr
+     * @param l
+     * @param r
+     * @return Comparable[]
+     */
     public Comparable[] Mergesort(Comparable[] arr, int l, int r)
     {
         if (l < r) {
