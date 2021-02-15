@@ -1,8 +1,26 @@
 public class ProfilerPrueba {
-    
-    /*
-        System.out.println(bur.bubbleSort(listadatos)[listadatos.length-1]);
-        System.out.println(bur.bubbleSort(listadatos)[0]);
+
+    public static void main(String[] args) {
+
+        Burbuja burbuja = new Burbuja();
+        Gnome gnome = new Gnome();
+        Merge merge = new Merge();
+        Quick quick = new Quick();
+
+        Comparable[] listadatos = new Comparable[3000];
+        for (int i = 0; i < 3000; i++) {
+            Integer num = (int) (Math.random() * 100) + 1;
+            listadatos[i] = num;
+        }
+
+        System.out.println(burbuja.bubbleSort(listadatos)[listadatos.length-1]);
+        System.out.println(burbuja.bubbleSort(listadatos)[0]);
+
+    }
+
+        /*
+        System.out.println(burbuja.bubbleSort(listadatos)[listadatos.length-1]);
+        System.out.println(burbuja.bubbleSort(listadatos)[0]);
         */
 
         /*
